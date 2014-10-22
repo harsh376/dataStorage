@@ -1,0 +1,81 @@
+\hypertarget{client_8c}{\section{client.\-c File Reference}
+\label{client_8c}\index{client.\-c@{client.\-c}}
+}
+
+
+This file implements a \char`\"{}very\char`\"{} simple sample client.  
+
+
+{\ttfamily \#include $<$errno.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$time.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}storage.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{client_8c_abf9640b57edfee97161d3e78c12aab91}{\#define {\bfseries S\-E\-R\-V\-E\-R\-H\-O\-S\-T}~\char`\"{}localhost\char`\"{}}\label{client_8c_abf9640b57edfee97161d3e78c12aab91}
+
+\item 
+\hypertarget{client_8c_a82cd61d8dfabc6a7d9ab209995f85e93}{\#define {\bfseries S\-E\-R\-V\-E\-R\-P\-O\-R\-T}~1111}\label{client_8c_a82cd61d8dfabc6a7d9ab209995f85e93}
+
+\item 
+\hypertarget{client_8c_ad35f6d0c07a460789cb42ba6c21917bf}{\#define {\bfseries S\-E\-R\-V\-E\-R\-U\-S\-E\-R\-N\-A\-M\-E}~\char`\"{}admin\char`\"{}}\label{client_8c_ad35f6d0c07a460789cb42ba6c21917bf}
+
+\item 
+\hypertarget{client_8c_a0ca4e04c96083700198d6532bbb84ed5}{\#define {\bfseries S\-E\-R\-V\-E\-R\-P\-A\-S\-S\-W\-O\-R\-D}~\char`\"{}dog4sale\char`\"{}}\label{client_8c_a0ca4e04c96083700198d6532bbb84ed5}
+
+\item 
+\hypertarget{client_8c_acadaccd8321f8569f31a11bdad1829da}{\#define {\bfseries T\-A\-B\-L\-E}~\char`\"{}marks\char`\"{}}\label{client_8c_acadaccd8321f8569f31a11bdad1829da}
+
+\item 
+\hypertarget{client_8c_a8ae9d53f33f46cfcfcb9736e6351452a}{\#define {\bfseries K\-E\-Y}~\char`\"{}ece297\char`\"{}}\label{client_8c_a8ae9d53f33f46cfcfcb9736e6351452a}
+
+\item 
+\hypertarget{client_8c_a30362161c93e3f1a4ee4c673f535b5a8}{\#define {\bfseries L\-E\-N\-G\-T\-H}~50}\label{client_8c_a30362161c93e3f1a4ee4c673f535b5a8}
+
+\item 
+\hypertarget{client_8c_a24a31f60b063af0e662125ea2427b140}{\#define {\bfseries L\-O\-G\-G\-I\-N\-G}~2}\label{client_8c_a24a31f60b063af0e662125ea2427b140}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{client_8c_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Start a client to interact with the storage server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{client_8c_ad033d05e078fa433531dcadea106749f}{F\-I\-L\-E $\ast$ {\bfseries log}}\label{client_8c_ad033d05e078fa433531dcadea106749f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file implements a \char`\"{}very\char`\"{} simple sample client. The client connects to the server, running at S\-E\-R\-V\-E\-R\-H\-O\-S\-T\-:S\-E\-R\-V\-E\-R\-P\-O\-R\-T and performs a number of storage\-\_\-$\ast$ operations. If there are errors, the client exists. 
+
+Definition in file \hyperlink{client_8c_source}{client.\-c}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{client_8c_a0ddf1224851353fc92bfbff6f499fa97}{\index{client.\-c@{client.\-c}!main@{main}}
+\index{main@{main}!client.c@{client.\-c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{client_8c_a0ddf1224851353fc92bfbff6f499fa97}
+
+
+Start a client to interact with the storage server. 
+
+If connect is successful, the client performs a storage\-\_\-set/get() on T\-A\-B\-L\-E and K\-E\-Y and outputs the results on stdout. Finally, it exists after disconnecting from the server. 
+
+Definition at line 34 of file client.\-c.
+
+
+
+References storage\-\_\-auth(), storage\-\_\-connect(), storage\-\_\-disconnect(), storage\-\_\-get(), storage\-\_\-set(), and storage\-\_\-record\-::value.
+

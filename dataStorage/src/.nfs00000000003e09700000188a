@@ -1,0 +1,7 @@
+server_host localhost
+server_port 1112
+username admin
+password xxxnq.BMCifhU
+concurrency 1
+table test col: char[20]
+table census name:int,date:int,year:int
